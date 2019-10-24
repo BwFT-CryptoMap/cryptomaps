@@ -44,9 +44,7 @@ export default () => {
                             <button type="button" name="search" placeholder="Search the Messari database"></button>
                         </form>
                     </div>
-                    <button className="searchBtn">
-                        <span>Search</span>
-                    </button>
+
                 </div>
                 <div className="loginSignUp">
                     <button onClick={() => toggleOpen('login')} className="loginBtn">
