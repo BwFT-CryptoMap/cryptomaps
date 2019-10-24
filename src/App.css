@@ -34,6 +34,7 @@ body {
   font-size: 1.5rem;
   margin: 2px auto;
   width: 19rem;
+  outline: none
 }
 
 .tools button {
@@ -43,6 +44,7 @@ body {
   cursor: pointer;
   color: white;
   background-color: #F29108;
+  outline: none
 }
 
 #PercentChange {
