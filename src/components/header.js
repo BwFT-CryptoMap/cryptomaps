@@ -36,9 +36,7 @@ export default () => {
                     <a href="../cryptoMap/index.html" className="hov active">Home</a>
                     <a href="#" className="hov">CryptoMap</a>
                     <a href="../cryptoMap/about.html" className="hov">About</a>
-                    <a href="https://twitter.com/messaricrypto" className="tablet">
-                        <img src={require("../images/twitterIcon.png")} alt="The Twitter Bird Logo"></img>
-                    </a>
+                  
                 </nav>
                 <div className="searchCont">
                     <div className="inputCont">
