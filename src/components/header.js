@@ -33,9 +33,9 @@ export default () => {
                     </a>
                 </div>
                 <nav>
-                    <a href="../cryptoMap/index.html" className="hov active">Home</a>
-                    <a href="#" className="hov">CryptoMap</a>
-                    <a href="../cryptoMap/about.html" className="hov">About</a>
+                    <a href="https://cryptomap.netlify.com/index.html" className="hov active">Home</a>
+                    <a href="https://messarimaps.netlify.com/" className="hov">CryptoMap</a>
+                    <a href="https://cryptomap.netlify.com/about.html" className="hov">About</a>
                   
                 </nav>
                 <div className="searchCont">
