@@ -33,8 +33,8 @@ export default () => {
                     </a>
                 </div>
                 <nav>
-                    <a href="https://cryptomap.netlify.com/index.html" className="hov active">Home</a>
-                    <a href="https://messarimaps.netlify.com/" className="hov">CryptoMap</a>
+                    <a href="https://cryptomap.netlify.com/index.html" className="hov ">Home</a>
+                    <a href="https://messarimaps.netlify.com/" className="hov active">CryptoMap</a>
                     <a href="https://cryptomap.netlify.com/about.html" className="hov">About</a>
                   
                 </nav>
