@@ -8,6 +8,7 @@ import {  Route, Link, Switch, Redirect } from "react-router-dom";
 import LiquidView from "./components/LiquidView";
 import ReportedVolView from "./components/ReportedVolView";
 import RealVolView from "./components/RealVolView";
+import OnChainTransVolume from "./components/OnChainTransVolume";
 
 import Blocklist from './components/TreeMap'
 import Header from './components/header'
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <TempNav />   
     
     <Switch>
@@ -37,6 +38,7 @@ function App() {
             <Route exact path="/liquid" render={() => <LiquidView/>} />
             <Route exact path="/reported-volume" render={() => <ReportedVolView/>}/>
             <Route exact path="/real-volume" render={()=> <RealVolView/>} />
+            <Route exact path="/on-chain-volume" render={()=> <OnChainTransVolume/>} />
         </Switch> 
       <footer className="App-footer"/>
         </div>

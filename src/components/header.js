@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import TempNav from './TempNav'
+// import TempNav from './TempNav'
 import Dialog from '@material-ui/core/Dialog'
 import '../landing.css'
 
@@ -46,14 +46,14 @@ export default () => {
                     </div>
 
                 </div>
-                <div className="loginSignUp">
+                {/* <div className="loginSignUp">
                     <button onClick={() => toggleOpen('login')} className="loginBtn">
                         <span>Login</span>
                     </button>
                     <button onClick={() => toggleOpen('signup')} className="signUpBtn">
                         <span>Sign Up</span>
                     </button>
-                </div>
+                </div> */}
             </div>
 
             <Dialog onClose={handleLoginClose} open={dialogsOpen['login']}>

@@ -18,6 +18,7 @@ export default () => {
               <Link to="/reported-volume">Reported Volume</Link>
            
               <Link to="/real-volume">Real Volume</Link>
+              <Link to="/on-chain-volume">Transaction Volume (24H, USD)</Link>
             
               
           </nav>
