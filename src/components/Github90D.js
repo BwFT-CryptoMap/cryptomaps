@@ -4,9 +4,11 @@ import { Svg, Rect, Text } from '@potion/element'
 import { Treemap } from '@potion/layout'
 import Tooltip from '@material-ui/core/Tooltip'
 
-// // txVol24hr
+// // githubCommits90d
 
-///NOTE: I CURRENTLY HAVE ON-CHAIN TRANSACTION VOLUME INSIDE OF THE CARD. WILL (1) HAVE TO LABEL THIS INSIDE OF THE CARD. (2) ROUND IT TO EXPRESS IN "THOUSANDS OR MILLIONS OR BILLIONS"... LIKE CREATE A JAVASCRIPT TERNARY FOR THIS
+
+//Note: Styling... Maybe include in the card that the data being displayed is github commits!
+
 
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
@@ -20,16 +22,16 @@ export default () => {
 
     let matchGreaterBorder;
 
-    const mapData = useSelector(state => state.mapData).filter(data => data.txVol24hr > 0).slice(0, 50)
+    const mapData = useSelector(state => state.mapData).filter(data => data.githubCommits90d > 0).slice(0, 50)
 
     const getPercentage = (marketCap, totalMarketCap) => {
         return ((marketCap / totalMarketCap) * 100)
     }
 
     const arrangeData = (data) => {
-        let totalMarketCap = data.reduce((a, c) => a + c.txVol24hr, 0)
+        let totalMarketCap = data.reduce((a, c) => a + c.githubCommits90d, 0)
         return data.map(datum => {
-            return { key: datum.id, value: getPercentage(datum.txVol24hr, totalMarketCap), symbol: datum.symbol, priceUsd: datum.priceUsd, percentageChange24HrUsd: datum.percentageChange24HrUsd, percentageChange7dUsd: datum.percentageChange7dUsd, percentageChange30dUsd: datum.percentageChange30dUsd, percentageChange90dUsd: datum.percentageChange90dUsd, txVol24hr: datum.txVol24hr  }
+            return { key: datum.id, value: getPercentage(datum.githubCommits90d, totalMarketCap), symbol: datum.symbol, priceUsd: datum.priceUsd, percentageChange24HrUsd: datum.percentageChange24HrUsd, percentageChange7dUsd: datum.percentageChange7dUsd, percentageChange30dUsd: datum.percentageChange30dUsd, percentageChange90dUsd: datum.percentageChange90dUsd, githubCommits90d: datum.githubCommits90d  }
         })
     }
 
@@ -148,8 +150,7 @@ const fonterDoerer = (x0, x1, y0, y1) => {
                                     <Tooltip title={
                                         <Fragment>
                                         <p> {data.symbol}</p>,
-                                        {/* <p>{data.priceUsd ? '$' + data.priceUsd.toFixed(2) : null}</p> */}
-                                        <p> {data.txVol24hr}</p>
+                                        <p> {data.githubCommits90d}</p>
                                        <p>{changePerformanceText}</p>
                                         </Fragment>
                                     }>
@@ -189,7 +190,7 @@ const fonterDoerer = (x0, x1, y0, y1) => {
                                             
                                             {/* {data.priceUsd ? '$' + data.priceUsd.toFixed(2) : null} */}
                                             
-                                            {data.txVol24hr ? '$' + data.txVol24hr.toFixed(2) : null}
+                                         {data.githubCommits90d}
     
                                                    
                                             </tspan>   

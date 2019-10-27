@@ -9,9 +9,10 @@ import LiquidView from "./components/LiquidView";
 import ReportedVolView from "./components/ReportedVolView";
 import RealVolView from "./components/RealVolView";
 import OnChainTransVolume from "./components/OnChainTransVolume";
+import Github90D from "./components/Github90D"
 
 import Blocklist from './components/TreeMap'
-import Header from './components/header'
+// import Header from './components/header'
 import { getApiData } from './actions'
 
 import CircularProgress from '@material-ui/core/CircularProgress'
@@ -39,6 +40,7 @@ function App() {
             <Route exact path="/reported-volume" render={() => <ReportedVolView/>}/>
             <Route exact path="/real-volume" render={()=> <RealVolView/>} />
             <Route exact path="/on-chain-volume" render={()=> <OnChainTransVolume/>} />
+            <Route exact path="/github-commits90" render={()=> <Github90D/>} />
         </Switch> 
       <footer className="App-footer"/>
         </div>

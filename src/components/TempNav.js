@@ -9,18 +9,12 @@ export default () => {
       <header className={"navBar"}>
 ​
             <nav>
-            
-              
                 <Link to="/">MarketCap</Link>
-            
                 <Link to="/liquid">Liquid MarketCap</Link>
-           
               <Link to="/reported-volume">Reported Volume</Link>
-           
               <Link to="/real-volume">Real Volume</Link>
               <Link to="/on-chain-volume">Transaction Volume (24H, USD)</Link>
-            
-              
+              <Link to="/github-commits90">Github Commits (90D)</Link>        
           </nav>
 ​
       </header>
