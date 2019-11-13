@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "name": "cryptomaps",
+    "builds": [
+        {
+            "src": "cryptomaps/package.json",
+            "use": "@now/static-build",
+            "config": {
+                "distDir": "build"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "cryptomaps/$1"
+        }
+    ]
+}
