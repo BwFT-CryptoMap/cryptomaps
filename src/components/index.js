@@ -1,6 +1,6 @@
 import CoinCard from './CoinCard'
 import CoinList from './CoinList'
-import SearchForm from './SearchForm'
+// import SearchForm from './SearchForm'
 
 
 
