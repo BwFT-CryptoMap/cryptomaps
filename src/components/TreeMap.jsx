@@ -25,7 +25,7 @@ export default () => {
     const arrangeData = (data) => {
         let totalMarketCap = data.reduce((a, c) => a + c.currentMarketcap, 0)
         return data.map(datum => {
-            return { key: datum.id, value: getPercentage(datum.currentMarketcap, totalMarketCap), symbol: datum.symbol, priceUsd: datum.priceUsd, percentageChange24HrUsd: datum.percentageChange24HrUsd, percentageChange7dUsd: datum.percentageChange7dUsd, percentageChange30dUsd: datum.percentageChange30dUsd, percentageChange90dUsd: datum.percentageChange90dUsd }
+            return { key: datum.id, value: getPercentage(datum.currentMarketcap, totalMarketCap), symbol: datum.symbol, priceUsd: datum.priceUsd, percentageChange24HrUsd: datum.percentageChange24HrUsd, percentageChange7dUsd: datum.percentageChange7dUsd, percentageChange30dUsd: datum.percentageChange30dUsd, percentageChange90dUsd: datum.percentageChange90dUsd, txVol24hr: datum.txVol24hr }
         })
     }
 
@@ -149,6 +149,7 @@ export default () => {
                                             <Fragment>
                                             <p> {data.symbol}</p>
                                             <p>{data.priceUsd ? '$' + data.priceUsd.toFixed(2) : null}</p>
+                                            {/* <p> {data.txVol24hr}</p> */}
                                            <p>{changePerformanceText}</p>
                                             </Fragment>
                                         }>
@@ -189,6 +190,19 @@ export default () => {
 
                                             </tspan>
                                         </Text>
+                                        {/* <Text
+                                        ///testing
+                                            x={x0 + (x1 - x0) * .4}
+                                            y={y0 + (y1 - y0) / 2}
+
+                                            fontSize={matchGreaterBorder}
+                                            color="black">
+                                            <tspan dy={matchGreaterBorder} >
+                                            
+                                            {data.txVol24hr}
+
+                                            </tspan>
+                                        </Text> */}
                                         <Text
                                             x={x0 + (x1 - x0) * .4}
                                             y={y0 + (y1 - y0) / 2}
