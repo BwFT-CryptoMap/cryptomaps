@@ -45,7 +45,9 @@ export default function SimpleMenu() {
         <Link to="/github-commits90">
           <MenuItem onClick={handleClose}>Github Commits (90D)</MenuItem>
         </Link>
-
+        <Link to="/sectionview">
+        <MenuItem onClick={handleClose}>Sectionview</MenuItem>
+      </Link>
         
       </Menu>
       

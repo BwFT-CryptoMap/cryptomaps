@@ -16,6 +16,7 @@ import Blocklist from './components/TreeMap'
 import { getApiData } from './actions'
 
 import CircularProgress from '@material-ui/core/CircularProgress'
+import SectionView from './components/SectionView';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
             <Route exact path="/real-volume" render={()=> <RealVolView/>} />
             <Route exact path="/on-chain-volume" render={()=> <OnChainTransVolume/>} />
             <Route exact path="/github-commits90" render={()=> <Github90D/>} />
+            <Route exact path="/sectionview" render={()=> <SectionView/>} />
         </Switch> 
       <footer className="App-footer"/>
         </div>
